@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,34 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaT-rn-wGu">
-                                <rect key="frame" x="149" y="294.5" width="116" height="317"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="aBf-WE-z92">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-Y5-auf">
+                                <rect key="frame" x="145" y="291" width="44" height="245"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="0kA-7Q-2sr"/>
-                                    <constraint firstAttribute="height" constant="317" id="vx9-T5-CjX"/>
+                                    <constraint firstAttribute="width" constant="44" id="crh-hm-58U"/>
+                                    <constraint firstAttribute="height" constant="245" id="lVT-MV-lPv"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knob" translatesAutoresizingMaskIntoConstraints="NO" id="5vZ-ll-MJg">
-                                <rect key="frame" x="107" y="44" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvC-I9-JTO">
+                                <rect key="frame" x="41" y="299" width="44" height="229"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="VeN-Od-c5i"/>
-                                    <constraint firstAttribute="height" constant="200" id="ro6-yW-nEi"/>
+                                    <constraint firstAttribute="height" constant="229" id="tP2-Nn-RkB"/>
+                                    <constraint firstAttribute="width" constant="44" id="xUf-R8-9Jh"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5vZ-ll-MJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ELA-L2-yMh"/>
-                            <constraint firstItem="xaT-rn-wGu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VjI-cD-W2l"/>
-                            <constraint firstItem="5vZ-ll-MJg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ola-CB-EAh"/>
-                            <constraint firstItem="xaT-rn-wGu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yHy-sV-0mq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aBf-WE-z92" secondAttribute="trailing" id="3J0-we-Cfj"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="top" secondItem="jFi-Y5-auf" secondAttribute="bottom" constant="-492" id="By7-VL-MCi"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="leading" secondItem="jFi-Y5-auf" secondAttribute="trailing" constant="-189" id="GDn-UP-4Zb"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M2R-j3-xMN"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="top" secondItem="GvC-I9-JTO" secondAttribute="bottom" constant="-484" id="Qml-J3-l8t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aBf-WE-z92" secondAttribute="bottom" id="bDJ-vo-bvr"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="leading" secondItem="GvC-I9-JTO" secondAttribute="trailing" constant="-85" id="ivv-nv-OdQ"/>
+                            <constraint firstItem="aBf-WE-z92" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t1i-IF-IqN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="xaT-rn-wGu" id="c6U-4T-k95"/>
-                        <outlet property="knob" destination="5vZ-ll-MJg" id="9CN-KL-S0f"/>
+                        <outlet property="contentSlider1" destination="GvC-I9-JTO" id="35t-bo-3ZP"/>
+                        <outlet property="contentSlider2" destination="jFi-Y5-auf" id="8Oj-fC-1Nh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,9 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="knob" width="101" height="101"/>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="background" width="974" height="1262"/>
     </resources>
 </document>
